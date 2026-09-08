@@ -1,3 +1,5 @@
+import calendar
+
 from donnees import generer_ventes, calculer_montant_vente
 import random
 
@@ -56,7 +58,16 @@ def chiffre_affaires_par_mois(ventes):
             ...
         }
     """
-    pass
+    chiffre_affaires = {}
+
+    for numero_mois in range(1, 13):
+        chiffre_affaires[calendar.month_name[numero_mois]] = sum(
+            calculer_montant_vente(vente)
+            for vente in ventes
+            if vente["numero_mois"] == numero_mois
+        )
+
+    return chiffre_affaires
 
 
 def meilleure_region(ventes):
