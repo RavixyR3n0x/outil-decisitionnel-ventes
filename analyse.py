@@ -38,8 +38,22 @@ def produit_le_plus_vendu(ventes):
     Returns: Tuple contenant : (nom_du_produit, quantité_totale)
     Exemple: ("Ordinateur", 145)    
     """
-    pass
+    qte_ventes = {}
+    produit_max = ""
+    quantite_max = 0
 
+    #remplir tableau des ventes
+    for vente in ventes:
+        produit = vente["produit"]
+        qte_ventes[produit] = qte_ventes.get(produit, 0) + vente["quantite"]
+
+    # prendre la meilleur vente
+    for produit, quantite in qte_ventes.items():
+        if quantite > quantite_max:
+            quantite_max = quantite
+            produit_max = produit
+
+    return (produit_max, quantite_max)
 
 def chiffre_affaires_par_mois(ventes):
     """
