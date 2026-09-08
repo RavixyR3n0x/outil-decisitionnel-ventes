@@ -27,9 +27,9 @@ def chiffre_affaires_par_region(ventes):
     """
     ca_regions = {}
     for vente in ventes:
-        region = vente["region"]
+        regions = vente["region"]
         montant = calculer_montant_vente(vente)
-        ca_regions[region] = ca_regions.get(region, 0) + montant
+        ca_regions[regions] = ca_regions.get(regions, 0) + montant
     return ca_regions
 
 
