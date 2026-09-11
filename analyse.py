@@ -64,12 +64,16 @@ def meilleure_region(ventes):
     Identifie la région générant le plus grand chiffre d'affaires.
 
     Args: 
-    ventes : list[dict]
+    ventes : 
 
     Returns: 
     tuple, Exemple : ("Normandie", 25800)
     """
-    pass
+    ca_regions = chiffre_affaires_par_region(ventes) # { "Normandie": 12000, "Bretagne": 8500, ... }
+    reg = max(ca_regions, key=ca_regions.get)
+    return (reg, ca_regions[reg])
+
+
 
 
 def montant_moyen_vente(ventes):
