@@ -112,7 +112,8 @@ def generer_recommandation(ventes):
     Returns
     str: Recommandation décisionnelle.
     """
-    pass
+    best_reg = meilleure_region(ventes)[0]
+    return f"La région {best_reg} est la plus performante. Il peut être intéressant d'y renforcer les actions commerciales"
 
 
 if __name__ == "__main__":
