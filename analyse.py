@@ -100,6 +100,7 @@ def meilleure_region(ventes):
     tuple, Exemple : ("Normandie", 25800)
     """
     pass
+    return chiffre_affaires_total(ventes)/len(ventes)
 
 
 def montant_moyen_vente(ventes):
