@@ -100,7 +100,7 @@ def meilleure_region(ventes):
     tuple, Exemple : ("Normandie", 25800)
     """
     pass
-    return chiffre_affaires_total(ventes)/len(ventes)
+    
 
 
 def montant_moyen_vente(ventes):
@@ -139,7 +139,7 @@ def generer_recommandation(ventes):
     Returns
     str: Recommandation décisionnelle.
     """
-    pass
+    return "Charles est un gros bdg"
 
 
 if __name__ == "__main__":
